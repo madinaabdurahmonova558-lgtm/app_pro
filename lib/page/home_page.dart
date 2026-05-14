@@ -14,18 +14,14 @@ class HomePage extends StatefulWidget {
   @override
   State<HomePage> createState() => _HomePageState();
 }
-
 class _HomePageState extends State<HomePage> {
   final TextEditingController _controller = TextEditingController();
   final TextEditingController _searchController = TextEditingController();
-
   int _selectedIndex = 0;
   String? selectedGroup; // выбранная группа для чата
-
   final _auth = FirebaseAuth.instance;
   final _firestore = FirebaseFirestore.instance;
   late User currentUser;
-
   @override
   void initState() {
     super.initState();
@@ -384,10 +380,7 @@ class _HomePageState extends State<HomePage> {
                     online ? 'Online' : 'Offline',
                     style: const TextStyle(color: Colors.green, fontSize: 16),
                   ),
-
                   const SizedBox(height: 20),
-
-                  /// SETTINGS LIST
                   Expanded(
                     child: ListView(
                       children: [
